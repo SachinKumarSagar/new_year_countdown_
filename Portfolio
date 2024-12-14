@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpeg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Sachin</span><br> Kumar from IITK</h1>
+                <p>Mechanical Engineer</p>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img-about.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Graduation')">Graduation</p>
+                        <p class="tab-links" onclick="opentab('Schooling')">Schooling</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Analytics </span> <br> Python, Tableau, Excel, Web Scraping</li>
+                            <li><span>Web Development </span> <br> HTML, CSS, JavaScript</li>
+                            <li><span>Data Structure and Algorithms </span> <br>C++</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Graduation">
+                        <ul>
+                            <li><span>B.TECH</span> <br> </li>
+                            <li>Mechanical Engineering from IIT KANPUR</li>
+                            <li>3rd year Undergraduate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Schooling">
+                        <ul>
+                            <li><span>10th </span> <br> CBSE || 2020 || 93.6% || JNV Pilibhit </li>
+                            <li><span>12th </span> <br> CBSE || 2022 || 93.2% || JNV Pilibhit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="achievements">
+        <div class="container">
+            <h1 class="sub-title">Achievements & Contact Details</h1>
+            <div class="row">
+                <div class="column-left">
+                    <h1>Achievements</h1>
+                    <ul>
+                        <li><span>Got 93.2% in 12th board exam</span> <br> Won the 2nd rank prize in the school</li>
+                        <li><span>Got 93.6% in 10th board exam</span> <br> Won the 3rd rank prize in the school</li>
+                        <li><span>Secured AIR 21443</span> <br> JEE Advanced 2022</li>
+                        <li><span>Secured AIR 14766</span> <br> JEE Mains</li>
+                    </ul>
+                </div>
+                <div class="column-right">
+                    <h1 class="rcol">Contact Details</h1>
+                    <ul>
+                        <li>Email: sachin.kumar@example.com</li>
+                        <li>Phone: +917505545827</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/sachin-kumar-742070252/" target="_blank">https://www.linkedin.com/in/sachin-kumar-742070252/</a></li>
+                        <li>GitHub: <a href="https://github.com/SachinKumarSagar" target="_blank">https://github.com/SachinKumarSagar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="container">
+            <h1>My Work</h1>
+            <div class="work-list">
+                <ul>
+                    <li>Serving as Manager in Show Management Team, IISM 24</li>
+                    <li>Served as Senior Secretary in Techkriti IITK</li>
+                    <li>Served as Junior Secretary in Techkriti IITK</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
