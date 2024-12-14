@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Countdown Section -->
+            <div class="countdown">
+                <div class="timer">
+                    <h2>DD:HH:MM:SS</h2>
+                    <h3>New Year Countdown</h3>
+                    <button id="previewBtn">Preview</button>
+                </div>
+                <div class="creative-area">
+                    <p>Happy New Year In Advance ,2025 <br></p>
+                    <img src="img_2025.jpeg" >
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <div class="picture">
+                    
+                </div>
+                <div class="about">
+        
+                         <h1>Sachin Kumar</h1>
+                        <br>3rd year Undergraduate , IIT KANPUR ,Mechanical Engineering 
+                        <br>C++ , Python , CSS , HTML , JavaScript 
+                        <br><br><br>
+                        <p>"Wishing you a year filled with joy, laughter, and endless possibilities" </p>
+                        <p>"May the new year bring you warmth, love, and light to guide your path to a positive destination"</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const countdownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+
+        const timerInterval = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.querySelector(".timer h2").innerHTML =
+                days + " : " + hours + " : " + minutes + " : " + seconds;
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.querySelector(".timer h2").innerHTML = "HAPPY NEW YEAR!";
+            }
+        }, 1000);
+
+        // Preview Button Logic
+        document.getElementById("previewBtn").addEventListener("click", function () {
+            alert("Happy New Year!");
+        });
+    </script>
+</body>
+</html>
